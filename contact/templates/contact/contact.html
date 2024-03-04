@@ -1,9 +1,8 @@
 {% extends 'home/base.html' %}
 {% block content %}
-    <form action="{% url 'contact:getContact' %}" method="post">
+    <form action="{% url 'contact:saveContact' %}" method="post">
         {% csrf_token %}
         {{ cf }}
-    <input type="submit" value="Gửi">
+        <input type="submit" value="Gửi">
     </form>
-
 {% endblock %}
